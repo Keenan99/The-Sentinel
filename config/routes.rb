@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
-  resources :articles
+  get 'categories/index'
+
+  get 'categories/edit'
+
+  get 'categories/new'
+
+  get 'categories/show'
+
+  resources :categories
+  resources :articles 
   root 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
